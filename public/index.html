@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<title>STATUS API</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="client.js"></script>
+	</head>
+	<body>
+		<div ng-controller="cont">
+			Current status: {{status}} <br><br>
+			Availability: <br><br>
+			<div ng-repeat="record in availability">
+				{{record.created_on}} : {{record.status}} : {{record.body}} <br><br>
+			</div>
+		</div>
+	</body>
+</html>
